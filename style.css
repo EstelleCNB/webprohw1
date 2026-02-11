@@ -40,22 +40,15 @@ main {
 }
 
 /* PROFILE SECTION */
-.profile-card {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-}
 
 .profile-pic {
     width: 200px;
     height: 250px;
     border-radius: 50%;
     object-fit: cover;
-    float: left;
-    margin-right: 25px;
 
-    -webkit-shape-outside: circle(50%);
-    shape-outside: circle(50%);
+    float: left;
+    margin: 0 25px 15px 0;
 
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.6);
