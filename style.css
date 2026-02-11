@@ -1,0 +1,199 @@
+body {
+    background: linear-gradient(135deg, #f0e9e9, #dce7e7, #9dc6c6);
+    font-family: "Playfair Display", serif;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* HEADER & NAVIGATION */
+header {
+    background: linear-gradient(135deg, #E3ECE8, #B7C7C2);
+    padding: 24px 40px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+.nav {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #150c04;
+    font-size: 18px;
+    padding: 10px 14px;
+}
+
+.nav a:hover {
+    background-color: #f8f2f4;
+    color: #3F7373;
+    transition: 0.4s ease;
+}
+
+/* MAIN LAYOUT */
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* PROFILE SECTION */
+.profile-card {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    float: left;
+    margin-right: 25px;
+
+    -webkit-shape-outside: circle(50%);
+    shape-outside: circle(50%);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* CONTACT SECTION */
+#contact {
+    text-align: center;
+    color: #F2F1F0;
+    background: linear-gradient(to bottom left, #3F7373, #c5d7d9, #afbb98);
+    padding: 30px;
+    border-radius: 50px;
+    margin: 40px 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    font-size: 2.6rem;
+    color: #3F7373;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #768C45;
+    transform: translateY(-3px);
+}
+
+/* COURSEWORK TABLE */
+#coursework {
+    background: linear-gradient(to bottom right, #cecdb9, #afbb98, #3F7373);
+    color: #F2F1F0;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.cw {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cw th,
+.cw td {
+    border: 1px solid #F2F1F0;
+    padding: 12px;
+    text-align: center;
+}
+
+.cw td {
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.cw td:hover {
+    background-color: #cecdb9;
+    color: #22393c;
+}
+
+/* INTERESTS & HOBBIES */
+.sections-row {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+#interestsection,
+#hobbiessection {
+    text-align: left;
+    flex: 1;
+    position: relative;
+    overflow: hidden; 
+    background: linear-gradient(to bottom right, #e9e9e2, #d4dac7, #6b9a9a);
+    padding: 30px;
+    border-radius: 12px;
+    color: #3F7373;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover lift effect */
+#interestsection:hover,
+#hobbiessection:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Shimmer highlight */
+#interestsection::before,
+#hobbiessection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.25),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+    transition: left 0.7s ease-in-out;
+    z-index: 1;
+}
+
+#interestsection:hover::before,
+#hobbiessection:hover::before {
+    left: 125%;
+}
+
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-pic {
+        float: none;
+        margin: 0 auto 20px;
+    }
+
+    .sections-row {
+        flex-direction: column;
+    }
+
+    .nav {
+        justify-content: center;
+    }
+}
